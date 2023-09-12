@@ -11,6 +11,7 @@ uvicorn==0.18.3
 #func
 numpy==1.25.2
 python==3.11.4
+nltk==3.8.1
 
 
 
