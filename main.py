@@ -1,6 +1,7 @@
 """
-Main cli or app entry point
+Main code
 """
+import numpy as np
 
 
 # if __name__ == "__main__":
