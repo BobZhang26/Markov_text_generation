@@ -4,6 +4,22 @@ Main code
 import numpy as np
 
 
+class ngramModel:
+    def __init__(self) -> None:
+        # initialize
+        return self.p
+
+    def train(self, encodings):
+        pass
+
+    def apply(self, encodings):
+        pass
+
+    def encodings(self):
+        pass
+
+
+# at each step choose the sngle most probable next word/token until it yields
 def finish_sentence(sentence, n, corpus, randomize=False):
     """
     inputs:
