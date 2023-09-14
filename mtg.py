@@ -25,8 +25,7 @@ def select_next(sentence, n, corpus, randomize=False):
     # frequency exist and stochastic
     elif dict_freq and randomize == True:
         weight = [val[1] for val in dict_freq]
-        next = random.choices(dict_freq, weight, k=1)
-        return next
+        return random.choices(dict_freq, weight, k=1)
 
     elif not dict_freq:
         # execute back off until yield frequency

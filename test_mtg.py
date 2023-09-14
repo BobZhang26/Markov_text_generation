@@ -19,7 +19,7 @@ def test_generator():
         ["she", "was", "not"],
         3,
         corpus,
-        randomize=False,
+        randomize=True,
     )
     print(words)
     assert words == [
