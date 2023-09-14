@@ -8,7 +8,7 @@ Jelinek 1985 "Markov Source Modeling of Text Generation"
 
 import nltk
 
-from mtg import finish_sentence
+from mtg import finish_sentence, select_next
 
 
 def test_generator():

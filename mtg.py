@@ -2,12 +2,13 @@
 Main code
 """
 import nltk
+import random
 
 nltk.download("gutenberg")
 nltk.download("punkt")
 
 
-def select_next(sentence, n, corpus, random=False):
+def select_next(sentence, n, corpus, randomize=False):
     dict_freq = {}
     for i in range(len(corpus) + 1 - n):
         ele = corpus[i : i + n]
@@ -16,19 +17,27 @@ def select_next(sentence, n, corpus, random=False):
                 dict_freq[ele[-1]] = 1
             else:
                 dict_freq[ele[-1]] += 1
-    if dict_freq:
+
+    # frequency exist and deterministic
+    if dict_freq and randomize == False:
         sort_dict = sorted(dict_freq.items(), key=lambda x: x[1], reverse=True)
-        # print(sort_dict)
         return sort_dict[0][0]
+    # frequency exist and stochastic
+    elif dict_freq and randomize == True:
+        weight = [val[1] for val in dict_freq]
+        next = random.choices(dict_freq, weight, k=1)
+        return next
+
     elif not dict_freq:
+        # execute back off until yield frequency
         pass
 
 
-def finish_sentence(sentence, n, corpus, random=False):
+def finish_sentence(sentence, n, corpus, randomize=False):
     curr_sentence = sentence
     punk = [".", "?", "!"]
     while len(curr_sentence) < 10 and curr_sentence[-1] not in punk:
-        new_token = select_next(sentence, n, corpus, random=False)
+        new_token = select_next(curr_sentence, n, corpus, randomize=False)
         curr_sentence.append(new_token)
 
     return curr_sentence
