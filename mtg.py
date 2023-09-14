@@ -1,22 +1,22 @@
 """
 Main code
 """
-import numpy as np
+import nltk
+
+nltk.download("gutenberg")
+nltk.download("punkt")
 
 
-class ngramModel:
-    def __init__(self) -> None:
-        # initialize
-        return self.p
-
-    def train(self, encodings):
-        pass
-
-    def apply(self, encodings):
-        pass
-
-    def encodings(self):
-        pass
+def select_next(sentence, n, corpus, random=False):
+    for i in range(len(text) + 1 - n):
+        ele = corpus[i : i + n]
+        if sen[-1] == ele[: n - 1]:
+            if ele[-1] not in dict_freq:
+                dict_freq[ele[-1]] = 1
+            else:
+                dict_freq[ele[-1]] += 1
+    dict_freq = sorted(dict_freq.items(), key=lambda x: x[1])
+    return dict_freq
 
 
 # at each step choose the sngle most probable next word/token until it yields
@@ -34,6 +34,11 @@ def finish_sentence(sentence, n, corpus, randomize=False):
 
     pass
 
+
+corpus = nltk.word_tokenize(nltk.corpus.gutenberg.raw("austen-sense.txt").lower())
+sentence = ["I"]
+n = 2
+select_next(sentence, n, corpus, random=False)
 
 # if __name__ == "__main__":
 # pylint: disable=no-value-for-parameter
