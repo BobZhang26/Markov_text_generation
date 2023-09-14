@@ -17,7 +17,7 @@ def select_next(sentence, n, corpus, randomize=False):
                 dict_freq[ele[-1]] = 1
             else:
                 dict_freq[ele[-1]] += 1
-
+    print(dict_freq)
     # frequency exist and deterministic
     if dict_freq and randomize == False:
         sort_dict = sorted(dict_freq.items(), key=lambda x: x[1], reverse=True)
