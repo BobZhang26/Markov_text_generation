@@ -19,7 +19,7 @@ def test_generator():
         # ["she", "was", "not", "that", "pretty", ",", "and", "no"],
         ["robot"],
         # ["she", "was", "not"],
-        3,
+        1,
         corpus,
         randomize=False,
     )
