@@ -94,14 +94,3 @@ def finish_sentence(sentence, n, corpus, randomize):
         new_token = select_next(curr_sentence, n, corpus, randomize)
         curr_sentence.append(new_token)
     return curr_sentence
-
-
-# if __name__ == "__main__":
-# pylint: disable=no-value-for-parameter
-#     add_cli()
-# sentence = ["she", "was", "not"]
-# n = 3
-# corpus = nltk.word_tokenize(nltk.corpus.gutenberg.raw("austen-sense.txt").lower())
-
-# fs = finish_sentence(sentence, n, corpus, randomize=True)
-# print(fs)
