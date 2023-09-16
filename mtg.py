@@ -66,8 +66,8 @@ def select_next(sentence, n, corpus, randomize):
         return  # "index out of range, model failed!"
     elif n == 1:
         dict_token = unigram(corpus)
-        next = random_res(dict_token, randomize)
-        return next
+        next_token = random_res(dict_token, randomize)
+        return next_token
 
     # store possible next and their frequency
     dict_freq = store_freq(sentence, n, corpus)
@@ -78,7 +78,7 @@ def select_next(sentence, n, corpus, randomize):
         return next
 
     else:  # not dict_freq
-        print("backoff on, try n = ", n - 1)
+        # print("backoff on, try n = ", n - 1)
         # execute back off until yield frequency, break at stop condition
         return select_next(sentence, n - 1, corpus, randomize)
 
