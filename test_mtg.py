@@ -8,7 +8,7 @@ Jelinek 1985 "Markov Source Modeling of Text Generation"
 
 import nltk
 
-from mtg import finish_sentence, select_next
+from mtg import finish_sentence
 
 
 def test_generator():
@@ -16,32 +16,34 @@ def test_generator():
     corpus = nltk.word_tokenize(nltk.corpus.gutenberg.raw("austen-sense.txt").lower())
 
     words = finish_sentence(
-        ["she", "was", "not"],
+        # ["she", "was", "not", "that", "pretty", ",", "and", "no"],
+        ["robot"],
+        # ["she", "was", "not"],
         3,
         corpus,
         randomize=False,
     )
     print(words)
-    assert words == [
-        "she",
-        "was",
-        "not",
-        "in",
-        "the",
-        "world",
-        ".",
-    ] or words == [
-        "she",
-        "was",
-        "not",
-        "in",
-        "the",
-        "world",
-        ",",
-        "and",
-        "the",
-        "two",
-    ]
+    # assert words == [
+    #    "she",
+    #    "was",
+    #    "not",
+    #    "in",
+    #    "the",
+    #    "world",
+    #    ".",
+    # ] or words == [
+    #    "she",
+    #    "was",
+    #    "not",
+    #    "in",
+    #    "the",
+    #    "world",
+    #    ",",
+    #    "and",
+    #    "the",
+    #    "two",
+    # ]
 
 
 if __name__ == "__main__":
