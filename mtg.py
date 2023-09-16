@@ -74,8 +74,8 @@ def select_next(sentence, n, corpus, randomize):
 
     # next word in deterministic and stochastic situations
     if dict_freq:
-        next = random_res(dict_freq, randomize)
-        return next
+        next_token = random_res(dict_freq, randomize)
+        return next_token
 
     else:  # not dict_freq
         # print("backoff on, try n = ", n - 1)
