@@ -20,13 +20,14 @@ def test_generator():
 
     words = finish_sentence(
         # ["she", "was", "not", "that", "pretty", ",", "and", "no"],
-        ["robot"],
+        # ["robot"],
         # ["she", "was", "not"],
-        1,
+        [" "],
+        3,
         corpus,
         randomize=False,
     )
-    print(words)
+    print(f"output complete sentence is {words}")
     # assert words == [
     #    "she",
     #    "was",

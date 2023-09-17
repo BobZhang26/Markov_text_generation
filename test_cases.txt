@@ -1,0 +1,47 @@
+case 1:
+senetence = ["she", "was", "not"] , n = 3 , randomnize = False
+output : ['she', 'was', 'not', 'in', 'the', 'world', '.']
+
+case 2:
+senetence = ["she", "was", "not"] , n = 2 , randomnize = False
+output : ['she', 'was', 'not', 'be', 'a', 'very', 'well', ',', 'and', 'the']
+
+case 3:
+senetence = ["she", "was", "not"] , n = 1 , randomnize = False
+output : ['she', 'was', 'not', ',', ',', ',', ',', ',', ',', ',']
+
+case 4:
+senetence = ["she", "was", "not"] , n = 3 , randomnize = True
+output : ['she', 'was', 'not', 'without', 'hope', 'of', 'amendment', '.'] # no definitive output
+
+case 5:
+senetence = ["she", "was", "not"] , n = 2 , randomnize = True
+output : ['she', 'was', 'not', 'behave', 'civil', 'to', 'expect', 'more', 'settled', ','] # no definitive output
+
+case 6:
+senetence = ["she", "was", "not"] , n = 1 , randomnize = True
+output : ['she', 'was', 'not', 'who', 'to', 'knowledge', 'as', 'left', '.'] # no definitive output
+
+case 7:
+sentence = ["robot"] , n = 3 , randomnize = False
+output : ['robot', ',', 'and', 'the', 'two', 'miss', 'steeles', ',', 'as', 'she'] # backoff activated
+
+case 8:
+sentence = ["robot"] , n = 2 , randomnize = False
+output : ['robot', ',', 'and', 'the', 'same', 'time', ',', 'and', 'the', 'same'] # backoff activated
+
+case 9:
+sentence = ["robot"] , n = 1 , randomnize = False
+output : ['robot', ',', ',', ',', ',', ',', ',', ',', ',', ',']
+
+case 10:
+sentence = ["she", "was", "not", "that", "pretty", ",", "and", "no"] , n = 8 , randomnize = False
+output : ['she', 'was', 'not', 'that', 'pretty', ',', 'and', 'no', 'reason', 'in'] # backoff activated
+
+case 10:
+sentence = ["she", "was", "not", "that", "pretty", ",", "and", "no"] , n = 3 , randomnize = False
+output : ['she', 'was', 'not', 'that', 'pretty', ',', 'and', 'no', 'sooner', 'was'] 
+
+case 11:
+sentence = [" "] , n = 3 , randomnize = False
+output : [' ', ',', 'and', 'the', 'two', 'miss', 'steeles', ',', 'as', 'she'] # backoff activated

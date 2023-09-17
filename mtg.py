@@ -23,7 +23,6 @@ def store_freq(sentence, n, corpus):
                 dict_freq[ele[-1]] = 1
             else:
                 dict_freq[ele[-1]] += 1
-    # print(dict_freq)
     return dict_freq
 
 
