@@ -1,25 +1,9 @@
 [![CI](https://github.com/nogibjj/python-template/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/python-template/actions/workflows/cicd.yml)
-## Template for Python projects 
+## Markov Text Generator 
 
 1. First thing to do on launch is to open a new shell and verify virtualenv is sourced.
 
-Things included are:
-
-* `Makefile`
-
-* `Pytest`
-
-* `pandas`
-
-* `Pylint`
-
-* `Dockerfile`
-
-* `GitHub copilot`
-
-* `jupyter` and `ipython` 
-
-* A base set of libraries for devops and web
-
-* `githubactions` 
+2. `mtg.py` contains the main code to complete a sentence
+   
+3. `test_mtg.py` is a test file to run some test cases to varify the code in `mtg.py` 
 
