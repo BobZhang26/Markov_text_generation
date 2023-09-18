@@ -4,9 +4,6 @@ Main code
 
 import random
 
-# nltk.download("gutenberg")
-# nltk.download("punkt")
-
 
 def store_freq(sentence, n, corpus):
     """
