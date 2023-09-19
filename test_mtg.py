@@ -19,35 +19,32 @@ def test_generator():
     corpus = nltk.word_tokenize(nltk.corpus.gutenberg.raw("austen-sense.txt").lower())
 
     words = finish_sentence(
-        # ["she", "was", "not", "that", "pretty", ",", "and", "no"],
-        ["robot"],
-        # ["she", "was", "not"],
-        # [" "],
+        ["she", "was", "not"],
         3,
         corpus,
         randomize=False,
     )
-    print(f"output complete sentence is {words}")
-    # assert words == [
-    #    "she",
-    #    "was",
-    #    "not",
-    #    "in",
-    #    "the",
-    #    "world",
-    #    ".",
-    # ] or words == [
-    #    "she",
-    #    "was",
-    #    "not",
-    #    "in",
-    #    "the",
-    #    "world",
-    #    ",",
-    #    "and",
-    #    "the",
-    #    "two",
-    # ]
+    print(words)
+    assert words == [
+        "she",
+        "was",
+        "not",
+        "in",
+        "the",
+        "world",
+        ".",
+    ] or words == [
+        "she",
+        "was",
+        "not",
+        "in",
+        "the",
+        "world",
+        ",",
+        "and",
+        "the",
+        "two",
+    ]
 
 
 if __name__ == "__main__":

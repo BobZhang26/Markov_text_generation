@@ -1,5 +1,7 @@
 """
 Main code
+
+Bob Zhang, 2023
 """
 
 import random
